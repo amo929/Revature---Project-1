@@ -1,0 +1,200 @@
+* {
+	font-family: "Lato", Arial;
+}
+
+body {
+	background-color: teal;
+}
+
+#login-container {
+	margin-top: 70px;
+}
+
+.formstuff {
+	box-sizing: border-box;
+	background-color: white;
+	border: 8px solid darkorange;
+	border-radius: 7px;
+	text-align: center;
+}
+
+.formstuff h2 {
+	margin: 40px 0;
+	font-size: 55px;
+}
+
+.formstuff input {
+	margin-top: 10px;
+	padding: 5px 4px;
+	border: 1px solid gray;
+	border-radius: 5px;	
+	text-align: center
+}
+
+.formstuff input:focus {
+	border: 1px solid blue;
+}
+
+#login_error {
+	visibility: hidden;
+	color: red;
+	font-size: 15px;
+	margin: 10px auto 40px;
+}
+
+#login-button, #make-account-button {
+	background-color: darkorange; /* Green */
+	border: none;
+	color: white;
+	padding: 7px 25px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 22px;
+	margin-bottom: 25px;
+}
+
+.slate {
+	text-align: center;
+	color: blue;
+}
+
+.slate select {
+	text-align: center;
+	margin: 10px auto 25px;
+	padding: 10px 0;
+}
+
+
+#login-button:hover, #make-account-button:hover {
+	background-color: orangered;
+	transition: all 0.3s ease 0s;
+}
+
+#login-button:active, #make-account-button:active {
+	transform: translateY(4px);
+}
+
+
+#register-button, #reg-goback-button {
+	font-size: 1.15em;
+	color: orangered;
+	border: none;
+	background: none;
+	margin-bottom: 90px;
+}
+
+#reg-goback-button {
+	margin-top: 10px;
+	margin-bottom: 0px;
+	float: left;
+}
+
+
+#table-select {
+	text-align: center;
+	padding: 7px 0;
+	margin-bottom: 10px;
+	float: right;
+	box-sizing: border-box;
+	border-radius: 5px;
+}
+
+#menu-header {
+	margin-bottom: 45px;
+}
+
+
+/* BUTTONS STYLING */
+#table-buttons button {
+	margin-right: 5px;
+}
+
+#menu-logout-button {
+	font-size: 30px;
+	color: orange;
+	border: 2px solid orange;
+	background: none;
+	margin-bottom: 90px;
+}
+
+#menu-logout-button:active {
+	color: white;
+	background: orange;
+}
+
+#ticket-button, #detail-button {
+	background-color: orange;
+	box-sizing: border-box;	
+}
+#ticket-button:active, #detail-button:active {
+	transition: all 0.3s ease 0s;
+	background-color: transparent;
+	color: orange;
+	border: 2px solid orange;
+}
+
+#update-button {
+	background-color: red;
+}
+
+#resolve-approve {
+	background-color: green;
+}
+
+#resolve-deny {
+	background-color: red;
+}
+
+/***************************/
+/* ALL ABOUT THOSE TABLES */
+#table-container table {
+	background-color: white;
+	width: 100%;
+	text-align: center;
+}
+
+#table-headers {
+	background-color: pink;
+}
+
+#table-container tr {
+	border-left: 15px solid orange !important;
+	border-right: 15px solid orange !important;
+	/*width: 90%;*/
+}
+/********************************/
+
+/*******************************/
+/* TICKET STYLING */
+#ticket > div {
+	width: 80%;
+	margin: 0 auto 10px;
+	/*margin-bottom: 10px;*/
+}
+
+#ticket div input, #ticket div select {
+	margin-left: 10px;
+}
+
+/*********************************
+/**********************************/
+/* DETAIL STYLING */
+#detail > div {
+	
+	margin: 0 auto;
+}
+#detail #detail-resolver {
+	/*text-align: right;*/
+}
+#detail > div {
+	margin-bottom: 10px ;
+}
+
+
+.cont {
+	/*display: none;	*/
+}
+
+#login-container {
+	display: block;
+}

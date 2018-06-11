@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Reimbursement</title>
+		<meta content="utf-8" http-equiv="encoding">
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="./css/index.style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	</head>
+	<body>
+		<div id="login-container" class="row cont">
+			<div class="formstuff col-lg-4 offset-lg-4 col-md-4 offset-md-4 col-sm-8 offset-sm-2 col-xs-12">
+				<div><h2>Welcome</h2></div>
+				<div><input class="forminput login" type="text" name="login_username" placeholder="Username"></div>
+				<div><input class="forminput login" type="password" name="login_password" placeholder="Password"></div>
+				<div id="login_error"><span>*Invalid Username or Password</span></div>
+				<div><button id="login-button" class="submitbutton">Log in</button></div>
+				<div><button id="register-button">Register</button></div>
+			</div>
+		</div>
+
+		<br><br>
+
+		<div id="register-container" class="row cont">
+			<div class="formstuff col-lg-4 offset-lg-4 col-md-4 offset-md-4 col-sm-8 offset-sm-2 col-xs-12">
+				<div><button id="reg-goback-button">&laquo; Go back</button></div>
+				<div><h2>Register</h2></div>
+				<div><input id="reg_username" class="forminput register" type="text" name="reg_username" placeholder="Username"></div>
+				<div><input class="forminput register" type="password" name="reg_password" placeholder="Password"></div>
+				<div><input class="forminput register" type="text" name="reg_firstname" placeholder="First Name"></div>
+				<div><input class="forminput register" type="text" name="reg_lastname" placeholder="Last Name"></div>
+				<div><input id="reg_email" class="forminput register" type="text" name="reg_email" placeholder="Email"></div>
+				<div class="slate"><select class="forminput register" name="reg_role">
+					<option>Employee</option>
+					<option>Finance Manager</option>
+				</select></div>
+				<div><button id="make-account-button">Make Account</button></div>
+			</div>
+		</div>
+
+		<div id="menu-container" class="row cont">
+			<div class="col-lg-6 offset-lg-3">
+				<button id="menu-logout-button">Log Out</button>
+			</div>
+
+			<div id="menu-header" class="col-lg-6 offset-lg-3">
+				<h1>Main Menu</h1>
+				<h2>View Reimbursement Tickets</h2>
+			</div>
+
+			<div id="table-container" class="col-lg-12 col-md-12">
+				<div class="col-lg-6 offset-lg-3 .slate">
+					<div id="table-buttons">
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ticket-modal" id="ticket-button">
+						  Make Ticket
+						</button>
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#detail-modal" id="detail-button">
+						  Details
+						</button>
+						<button id="update-button" type="button" class="btn btn-primary">Refresh</button>
+
+
+						<select id="table-select">
+							<option>All</option>
+							<option>Pending</option>
+							<option>Approved</option>
+							<option>Denied</option>
+						</select>
+					</div>
+
+				</div>
+				<table class="col-lg-6 offset-lg-3">
+					<thead id="changecolor" class="">
+						<tr id="table-headers" class="row">
+							<th class="col-sm-2" scope="col">Ticket #</th>
+							<th class="col-sm-2" scope="col">Submitted</th>
+							<th class="col-sm-2" scope="col">Username</th>
+							<th class="col-sm-2" scope="col">Amount</th>
+							<th class="col-sm-2" scope="col">Type</th>
+							<th class="col-sm-2" scope="col">Status</th>
+						</tr>
+					</thead>'
+					<tbody id="result-body">
+						<tr class="row">
+							<th class="col-sm-2" scope="row">1</th>
+							<td class="col-sm-2">Some date</td>
+							<td class="col-sm-2">Username later</td>
+							<td class="col-sm-2">$500.00</td>
+							<td class="col-sm-2">Lodging</td>
+							<td class="col-sm-2">Pending</td>
+						</tr>
+						<tr class="row">
+							<th class="col-sm-2" scope="row">2</th>
+							<td class="col-sm-2">Some date</td>
+							<td class="col-sm-2">Username later</td>
+							<td class="col-sm-2">$500.00</td>
+							<td class="col-sm-2">Lodging</td>
+							<td class="col-sm-2">Pending</td>
+						</tr>
+						<tr class="row">
+							<th class="col-sm-2" scope="row">3</th>
+							<td class="col-sm-2">Some date</td>
+							<td class="col-sm-2">Username later</td>
+							<td class="col-sm-2">$500.00</td>
+							<td class="col-sm-2">Lodging</td>
+							<td class="col-sm-2">Pending</td>
+						</tr>
+						<tr class="row">
+							<th class="col-sm-2" scope="row">4</th>
+							<td class="col-sm-2">Some date</td>
+							<td class="col-sm-2">Username later</td>
+							<td class="col-sm-2">$500.00</td>
+							<td class="col-sm-2">Lodging</td>
+							<td class="col-sm-2">Pending</td>
+						</tr>
+						<tr class="row">
+							<th class="col-sm-2" scope="row">5</th>
+							<td class="col-sm-2">Some date</td>
+							<td class="col-sm-2">Username later</td>
+							<td class="col-sm-2">$500.00</td>
+							<td class="col-sm-2">Lodging</td>
+							<td class="col-sm-2">Pending</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+
+		<br><br><br>
+
+		<!-- DETAIL MODAL -->
+		<div class="modal fade" id="detail-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLongTitle">Details</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div id="ticket-container" class="row">
+							<div id="detail" class="col-xs-12">
+								<div class="row">
+									<div id="detail-author" class="col-lg-6">
+										<div>Ticket #: </div>
+										<div>Amount: </div>
+										<div>Type: </div>
+										<div>Author username</div>
+										<div>Author email</div>
+										<div>First Name and Last Name</div>
+									</div>
+									<div id="detail-resolver" class="col-lg-6">
+										<div>Pending</div>
+										<div>Resolved By</div>
+										<div>Resolver username</div>
+										<div>Resolver email</div>
+										<div>First Name and Last Name</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-8 offset-lg-2">
+										<div><b>Description</b></div>
+										<div id="detail-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+											tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+											consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+											cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary" id="resolve-approve">Approve</button>
+						<button type="button" class="btn btn-primary" id="resolve-deny">Deny</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- TICKET MODAL -->
+		<div class="modal fade" id="ticket-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLongTitle">Request Ticket</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div id="request-container">
+							<div id="ticket" class="col-xs-12">
+								<div id="ticket-userinfo">
+									<div>Username</div>
+									<div>User email</div>
+									<div>First Name</div>
+									<div>Last Name</div>
+								</div>
+								<div>Amount <input type="number" id="request-amount" name="request-amount" placeholder="Enter a number"></div>
+								<div>Type <select id="request-type">
+									<option>Lodging</option>
+									<option>Food</option>
+									<option>Travel</option>
+									<option>Other</option>
+								</select></div>
+								<div><textarea id="request-desc" placeholder="Add a descripton here"></textarea></div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary" id="request-button">Send</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+	<script type="text/javascript" src="./js/transition.script.js"></script>
+	<script type="text/javascript" src="./js/index.script.js"></script>
+</html>
+
